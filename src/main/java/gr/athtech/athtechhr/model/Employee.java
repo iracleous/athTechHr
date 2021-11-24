@@ -19,7 +19,8 @@ public class Employee {
     @ManyToOne
     private Department belongingDepartment;
 
-
+    @OneToOne (mappedBy  ="employeeManager")
+    private Department managingDepartment ;
 
     @ManyToMany(cascade = {
             CascadeType.PERSIST,
